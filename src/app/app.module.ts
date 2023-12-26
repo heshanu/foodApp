@@ -10,13 +10,18 @@ import { NotfoundComponent } from './compoent/notfound/notfound.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CategoryModule } from './modules/category/category.module';
 import { LoginComponent } from './compoent/login/login.component';
-import {MatSidenavModule} from '@angular/material/sidenav'; 
+import {MatSidenavModule} from '@angular/material/sidenav';
+import { RestarantItemsComponent } from './compoent/restarant-items/restarant-items.component';
+import { CreateOrderComponent } from './compoent/create-order/create-order.component'; 
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     NotfoundComponent,
-    LoginComponent
+    LoginComponent,
+    RestarantItemsComponent,
+    CreateOrderComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +30,8 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     MaterialModule,
     FormsModule,
     ReactiveFormsModule,
-    CategoryModule,MatSidenavModule
+    CategoryModule, MatSidenavModule,
+    HttpClientModule
   ],
   providers: [
     provideClientHydration()
