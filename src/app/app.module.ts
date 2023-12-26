@@ -14,6 +14,8 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import { RestarantItemsComponent } from './compoent/restarant-items/restarant-items.component';
 import { CreateOrderComponent } from './compoent/create-order/create-order.component'; 
 import { HttpClientModule } from '@angular/common/http';
+import { MasterService } from './service/master.service';
+import { MatCardModule } from '@angular/material/card';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,11 +32,14 @@ import { HttpClientModule } from '@angular/common/http';
     MaterialModule,
     FormsModule,
     ReactiveFormsModule,
-    CategoryModule, MatSidenavModule,
-    HttpClientModule
+    CategoryModule,
+    MatSidenavModule,
+    HttpClientModule,
+    MatCardModule
   ],
   providers: [
-    provideClientHydration()
+    provideClientHydration(),
+    MasterService
   ],
   bootstrap: [AppComponent]
 })

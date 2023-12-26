@@ -4,6 +4,7 @@ import { NotfoundComponent } from './compoent/notfound/notfound.component';
 import { LoginComponent } from './compoent/login/login.component';
 import { RestarantItemsComponent } from './compoent/restarant-items/restarant-items.component';
 import { CreateOrderComponent } from './compoent/create-order/create-order.component';
+import { CommonModule } from '@angular/common';
 
 const routes: Routes = [
    {
@@ -25,7 +26,7 @@ const routes: Routes = [
   }
 ];
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes),CommonModule],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
