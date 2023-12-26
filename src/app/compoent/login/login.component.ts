@@ -1,15 +1,12 @@
 import { Component, inject } from '@angular/core';
-
 import { FormBuilder, Validators } from '@angular/forms';
-
-
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-  private fb = inject(FormBuilder);
+  constructor(private fb: FormBuilder) {}
   addressForm = this.fb.group({
     company: null,
     firstName: [null, Validators.required],

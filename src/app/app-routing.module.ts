@@ -1,15 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { NotfoundComponent } from './compoent/notfound/notfound.component';
+import { LoginComponent } from './compoent/login/login.component';
 
 const routes: Routes = [
    {
-    path: '',
-    loadChildren: () => import('./modules/loginmodule/loginmodule.module').then(m => m.LoginmoduleModule)
+    path:'login',component:LoginComponent
   },
   {
-    path: 'category', 
-    loadChildren: () => import('./modules/categorymodule/categorymodule.module').then(m => m.CategorymoduleModule) 
+    path: 'category',
+    loadChildren: () => import('./modules/category/category.module')
+      .then(m => m.CategoryModule)
   },
   {
     path:'**',component:NotfoundComponent
