@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { MasterService } from '../../../service/master.service';
+import { Food } from '../../../shared/interface/food';
 
 @Component({
   selector: 'app-category',
@@ -9,7 +10,7 @@ import { MasterService } from '../../../service/master.service';
 })
 export class CategoryComponent {
 
-  public foodCategoryList: any[] = [];
+  public foodCategoryList: Food[] = [];
 
   constructor(private master: MasterService) { 
     this.getAllFoodCategory();

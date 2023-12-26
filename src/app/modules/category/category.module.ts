@@ -8,6 +8,7 @@ import { MaterialModule } from '../../shared/material/material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
 import { CategoryComponent } from './category/category.component';
+import { provideClientHydration } from '@angular/platform-browser';
 @NgModule({
   declarations: [
     CategoryComponent
@@ -21,12 +22,11 @@ import { CategoryComponent } from './category/category.component';
     HttpClientModule,
     MatCardModule
   ],
-  exports: [
-     
-  CategoryRoutingModule
-  ],
+  exports: [CategoryRoutingModule],
   providers: [
-    MasterService
+    provideClientHydration(),
+    MasterService,
+
   ],
 })
 export class CategoryModule { }
