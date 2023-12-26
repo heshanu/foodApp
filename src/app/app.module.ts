@@ -11,8 +11,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
-import { ModulesModule } from './modules/modules.module';
 import { NotfoundComponent } from './compoent/notfound/notfound.component';
+import { CategorymoduleModule } from './modules/categorymodule/categorymodule.module';
+import { LoginmoduleModule } from './modules/loginmodule/loginmodule.module';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { NotfoundComponent } from './compoent/notfound/notfound.component';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    ModulesModule
+    CategorymoduleModule,
+    LoginmoduleModule
   ],
   providers: [
     provideClientHydration()
