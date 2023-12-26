@@ -42,7 +42,6 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTreeModule } from '@angular/material/tree';
 
-
 @NgModule({
   declarations: [],
   imports: [
@@ -61,8 +60,9 @@ import { MatTreeModule } from '@angular/material/tree';
     MatInputModule,
     MatSelectModule,
     MatRadioModule,
-    MatDialogModule
+    MatDialogModule,
   ],
+  
   exports: [
     MatSlideToggleModule,
     MatGridListModule,
