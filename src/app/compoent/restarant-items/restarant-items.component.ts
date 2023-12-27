@@ -12,7 +12,7 @@ export class RestarantItemsComponent {
   foodList: Food[] = []; 
   foodObject!: Food;
   foodName!: string;
-  currentRate: number = 0;
+  currentRate!: number;
 
   constructor(private activate: ActivatedRoute,private master:MasterService) {
     this.activate.params.subscribe((data) => {
@@ -20,6 +20,7 @@ export class RestarantItemsComponent {
       this.foodName = data["categoryName"];
     });
     this.getAllFoodItems();
+   // this.increaseIncrease(this.foodObject.rating);
   }
   
   public getAllFoodItems():void {
@@ -36,6 +37,11 @@ export class RestarantItemsComponent {
 
   public backToHome():void{
     window.history.back();
+  }
+
+  public increaseIncrease(val:number): void{
+    this.currentRate = val;
+    this.currentRate++;
   }
   
 }
