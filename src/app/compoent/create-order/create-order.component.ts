@@ -1,6 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { Food } from '../../shared/interface/food';
-import { RestarantItemsComponent } from '../restarant-items/restarant-items.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-create-order',
@@ -14,6 +14,11 @@ export class CreateOrderComponent {
     this.foodObject = JSON.parse(localStorage.getItem('foodObject')!);
     this.foodOrderList.push(this.foodObject);
     console.log('this is foodObject',this.foodOrderList);
+  }
+
+  public back() { 
+    //this.router.navigate(['/foodcategory']);
+    window.history.back();
   }
 
 }
