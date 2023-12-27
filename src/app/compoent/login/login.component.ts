@@ -1,13 +1,18 @@
 import { Component, inject } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { NotifierService } from 'angular-notifier';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-  constructor(private fb: FormBuilder,private router:Router) {}
+  constructor(private fb: FormBuilder,
+    private router: Router, private notifierService: NotifierService) {
+    this.notifier = notifierService;
+  }
+  private readonly notifier!: NotifierService;
   addressForm = this.fb.group({
     username: [null, Validators.required],
     email: [null, Validators.required],
@@ -26,10 +31,13 @@ export class LoginComponent {
       localStorage.setItem('email', JSON.stringify(this.addressForm.value.email));
       localStorage.setItem('username', JSON.stringify(this.addressForm.value.username));
       if (this.storeCredientials()) {
+        this.notifierService.notify("success", "Successfully Logged In");
         this.router.navigate(['/foodcategory']);
       }
       else {
+        this.notifierService.notify("error", "Invalid Credentials");
         this.router.navigate(['/login']);
+
       }
     }
     this.addressForm.reset();
