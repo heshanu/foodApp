@@ -9,7 +9,9 @@
         <mat-card-subtitle>{{foodObject.price|currency}}</mat-card-subtitle>
       <br>
         <mat-card-subtitle>
-            {{foodObject.rating}}<mat-icon aria-hidden="false" size="large" aria-label="Example star icon" fontIcon="star"></mat-icon>
+            {{currentRate}}<mat-icon aria-hidden="false" 
+            size="large" (click)="increaseIncrease(foodObject.rating)" 
+            aria-label="Example star icon" fontIcon="star"></mat-icon>
         </mat-card-subtitle>
         
     </mat-card-content>
