@@ -11,7 +11,7 @@ const routes: Routes = [
     path:'login',component:LoginComponent
   },
   {
-    path: 'restaurant-items',component:RestarantItemsComponent
+    path: 'restaurant-items/:categoryName',component:RestarantItemsComponent
   },
   {
     path:'orders',component:CreateOrderComponent

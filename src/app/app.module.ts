@@ -15,7 +15,9 @@ import { RestarantItemsComponent } from './compoent/restarant-items/restarant-it
 import { CreateOrderComponent } from './compoent/create-order/create-order.component'; 
 import { HttpClientModule } from '@angular/common/http';
 import { MasterService } from './service/master.service';
-import { MatCardModule } from '@angular/material/card';
+//import { MatCardModule } from '@angular/material/card';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +37,6 @@ import { MatCardModule } from '@angular/material/card';
     CategoryModule,
     MatSidenavModule,
     HttpClientModule,
-    MatCardModule
   ],
   providers: [
     provideClientHydration(),
