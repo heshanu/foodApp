@@ -15,6 +15,8 @@ import { RestarantItemsComponent } from './compoent/restarant-items/restarant-it
 import { CreateOrderComponent } from './compoent/create-order/create-order.component'; 
 import { HttpClientModule } from '@angular/common/http';
 import { MasterService } from './service/master.service';
+import { NgZorroAntdModule } from './shared/nzmaterial/nZmaterial';
+import { PopupComponent } from './shared/comp/popup/popup.component';
 //import { MatCardModule } from '@angular/material/card';
 
 
@@ -25,7 +27,8 @@ import { MasterService } from './service/master.service';
     NotfoundComponent,
     LoginComponent,
     RestarantItemsComponent,
-    CreateOrderComponent
+    CreateOrderComponent,
+    PopupComponent
   ],
   imports: [
     BrowserModule,
@@ -37,6 +40,7 @@ import { MasterService } from './service/master.service';
     CategoryModule,
     MatSidenavModule,
     HttpClientModule,
+    NgZorroAntdModule
   ],
   providers: [
     provideClientHydration(),

@@ -14,6 +14,21 @@ export class RestarantItemsComponent {
   foodName!: string;
   currentRate!: number;
 
+  orderObj:any={
+    'orderId': "",
+    'userId': "",
+    'orderDate': new Date(),
+    'totalAmount': 0,
+    'restaurantId': 0,
+    'orderNo': "string",
+    'zomatoOrderId': [{
+      'orderItemId': 0,
+      'orderId': 0,
+      'itemId': 0,
+      'quantity': 0,
+    }]
+  }
+
   constructor(private activate: ActivatedRoute,private master:MasterService,private router:Router) {
     this.activate.params.subscribe((data) => {
       console.log(data);
@@ -49,5 +64,11 @@ export class RestarantItemsComponent {
     //navigate to order component
     this.router.navigate(['/orders']);
     
+  }
+
+  public placeOrder(): void {
+    
+   // this.orderObj.userId = this.foodObject.strCategory;
+      
   }
 }
