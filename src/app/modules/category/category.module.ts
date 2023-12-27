@@ -9,6 +9,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
 import { CategoryComponent } from './category/category.component';
 import { provideClientHydration } from '@angular/platform-browser';
+import { NgZorroAntdModule } from '../../shared/nzmaterial/nZmaterial';
 @NgModule({
   declarations: [
     CategoryComponent
@@ -20,7 +21,8 @@ import { provideClientHydration } from '@angular/platform-browser';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    MatCardModule
+    MatCardModule,
+    NgZorroAntdModule
   ],
   exports: [CategoryRoutingModule],
   providers: [

@@ -15,6 +15,7 @@ import { RestarantItemsComponent } from './compoent/restarant-items/restarant-it
 import { CreateOrderComponent } from './compoent/create-order/create-order.component'; 
 import { HttpClientModule } from '@angular/common/http';
 import { MasterService } from './service/master.service';
+import { NgZorroAntdModule } from './shared/nzmaterial/nZmaterial';
 //import { MatCardModule } from '@angular/material/card';
 
 
@@ -37,6 +38,7 @@ import { MasterService } from './service/master.service';
     CategoryModule,
     MatSidenavModule,
     HttpClientModule,
+    NgZorroAntdModule
   ],
   providers: [
     provideClientHydration(),
