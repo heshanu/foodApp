@@ -15,6 +15,7 @@ import { RestarantItemsComponent } from './compoent/restarant-items/restarant-it
 import { CreateOrderComponent } from './compoent/create-order/create-order.component'; 
 import { HttpClientModule } from '@angular/common/http';
 import { MasterService } from './service/master.service';
+import { NotifierModule } from 'angular-notifier';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { MasterService } from './service/master.service';
     CategoryModule,
     MatSidenavModule,
     HttpClientModule,
+    NotifierModule 
   ],
   providers: [
     provideClientHydration(),
