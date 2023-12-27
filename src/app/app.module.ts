@@ -16,6 +16,7 @@ import { CreateOrderComponent } from './compoent/create-order/create-order.compo
 import { HttpClientModule } from '@angular/common/http';
 import { MasterService } from './service/master.service';
 import { NgZorroAntdModule } from './shared/nzmaterial/nZmaterial';
+import { PopupComponent } from './shared/comp/popup/popup.component';
 //import { MatCardModule } from '@angular/material/card';
 
 
@@ -26,7 +27,8 @@ import { NgZorroAntdModule } from './shared/nzmaterial/nZmaterial';
     NotfoundComponent,
     LoginComponent,
     RestarantItemsComponent,
-    CreateOrderComponent
+    CreateOrderComponent,
+    PopupComponent
   ],
   imports: [
     BrowserModule,

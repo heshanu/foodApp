@@ -9,8 +9,7 @@
     <mat-card-subtitle>{{f.price|currency}}</mat-card-subtitle>
     <mat-card-actions>
         <!-- <button mat-button (click)="payHere()">PayHere</button> -->
-        <button nz-button [nzType]="'primary'" (click)="showModal()"><span>PayHere</span></button>
-        <button nz-button nzType="primary" (click)="showConfirm()">Confirm</button>
+        <button nz-button [nzType]="'primary'" (click)="openDialog()"><span>PayHere</span></button>
         <button mat-button (click)="back()">Back</button>
     </mat-card-actions>
 </mat-card>

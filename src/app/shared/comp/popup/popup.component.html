@@ -1,0 +1,14 @@
+<div>
+    <mat-card-title>Your Order</mat-card-title>
+    <mat-card-header>
+        <mat-card-title>{{foodObj.strCategory}}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image [src]="foodObj.strCategoryThumb" alt="Photo of a Shiba Inu">
+    <mat-card-subtitle>{{foodObj.price|currency}}</mat-card-subtitle>
+    <mat-card-actions>
+        <!-- <button mat-button (click)="payHere()">PayHere</button> -->
+        <!-- <button nz-button [nzType]="'primary'" (click)="openDialog()"><span>PayHere</span></button> -->
+        <button mat-button (click)="back()">Back</button>
+        <button nz-button [nzType]="'primary'"><span>PayHere</span></button>
+    </mat-card-actions>
+</div>
