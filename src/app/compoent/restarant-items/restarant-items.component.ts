@@ -43,11 +43,13 @@ export class RestarantItemsComponent {
   }
   
   public order() {
-    console.log(`Order food`, this.foodObject);
-    //store food object in local storage
-    localStorage.setItem('foodObject', JSON.stringify(this.foodObject));
-    //navigate to order component
     this.router.navigate(['/orders']);
-    
+    //store food object in local storage
+  //   if (this.foodObject != undefined) {
+  //   console.log(`this is rest`);
+  //   localStorage.setItem('foodObject', JSON.stringify(this.foodObject));
+  //   this.router.navigate(['/orders']);
+  // }
+    //navigate to order component
   }
 }

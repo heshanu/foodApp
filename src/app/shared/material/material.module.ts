@@ -42,6 +42,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTreeModule } from '@angular/material/tree';
 
+
 @NgModule({
   declarations: [],
   imports: [
@@ -61,6 +62,7 @@ import { MatTreeModule } from '@angular/material/tree';
     MatSelectModule,
     MatRadioModule,
     MatDialogModule,
+    MatSnackBarModule 
   ],
   
   exports: [
@@ -78,7 +80,9 @@ import { MatTreeModule } from '@angular/material/tree';
     MatInputModule,
     MatSelectModule,
     MatRadioModule,
-    MatDialogModule
+    MatDialogModule,
+    MatSnackBarModule 
+    
   ]
 })
 export class MaterialModule { }

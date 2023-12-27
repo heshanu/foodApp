@@ -15,5 +15,4 @@ export class CreateOrderComponent {
     this.foodOrderList.push(this.foodObject);
     console.log('this is foodObject',this.foodOrderList);
   }
-
 }

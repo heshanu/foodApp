@@ -15,8 +15,6 @@ import { RestarantItemsComponent } from './compoent/restarant-items/restarant-it
 import { CreateOrderComponent } from './compoent/create-order/create-order.component'; 
 import { HttpClientModule } from '@angular/common/http';
 import { MasterService } from './service/master.service';
-//import { MatCardModule } from '@angular/material/card';
-
 
 @NgModule({
   declarations: [
@@ -25,7 +23,8 @@ import { MasterService } from './service/master.service';
     NotfoundComponent,
     LoginComponent,
     RestarantItemsComponent,
-    CreateOrderComponent
+    CreateOrderComponent,
+
   ],
   imports: [
     BrowserModule,
