@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { MasterService } from '../../service/master.service';
 import { Food } from '../../shared/interface/food';
 
@@ -14,7 +14,7 @@ export class RestarantItemsComponent {
   foodName!: string;
   currentRate!: number;
 
-  constructor(private activate: ActivatedRoute,private master:MasterService) {
+  constructor(private activate: ActivatedRoute,private master:MasterService,private router:Router) {
     this.activate.params.subscribe((data) => {
       console.log(data);
       this.foodName = data["categoryName"];
@@ -31,9 +31,7 @@ export class RestarantItemsComponent {
     console.log('this is selectedFood',selectedFood);
   }
 
-  public loadFoodItemByCategory():void{ 
-
-  }
+ 
 
   public backToHome():void{
     window.history.back();
@@ -44,4 +42,12 @@ export class RestarantItemsComponent {
     this.currentRate++;
   }
   
+  public order() {
+    console.log(`Order food`, this.foodObject);
+    //store food object in local storage
+    localStorage.setItem('foodObject', JSON.stringify(this.foodObject));
+    //navigate to order component
+    this.router.navigate(['/orders']);
+    
+  }
 }
