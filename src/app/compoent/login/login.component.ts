@@ -26,11 +26,9 @@ export class LoginComponent {
       localStorage.setItem('email', JSON.stringify(this.addressForm.value.email));
       localStorage.setItem('username', JSON.stringify(this.addressForm.value.username));
       if (this.storeCredientials()) {
-        alert("Login Success");
-        this.router.navigate(['/dashboard']);
+        this.router.navigate(['/foodcategory']);
       }
       else {
-        alert("Login Failed");
         this.router.navigate(['/login']);
       }
     }
@@ -39,11 +37,13 @@ export class LoginComponent {
 
   public storeCredientials(): boolean {
     console.log(`type`,typeof(localStorage.getItem('email')));
-    if (localStorage.getItem('email') == "h@gmail.com" && localStorage.getItem('username') == "heshan") {
-      return true;
-    } else { 
+    if (this.addressForm.value.username !== null && this.addressForm.value.email !== null
+    ) { 
+      if (this.addressForm.value.username === 'heshan' && this.addressForm.value.email =='h@gmail.com'){
+        return true;
+      }
       return false;
     }
-    
+    return false;
   }
 }
