@@ -44,6 +44,10 @@ export class RestarantItemsComponent {
   
   public order() {
     console.log(`Order food`, this.foodObject);
+    //store food object in local storage
+    localStorage.setItem('foodObject', JSON.stringify(this.foodObject));
+    //navigate to order component
     this.router.navigate(['/orders']);
+    
   }
 }
